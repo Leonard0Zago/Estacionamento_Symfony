@@ -17,7 +17,7 @@ class Vagas
     private ?string $tipo = null;
 
     #[ORM\Column]
-    private ?bool $obupada = null;
+    private ?bool $ocupada = null;
 
     public function getId(): ?int
     {
@@ -38,12 +38,12 @@ class Vagas
 
     public function isObupada(): ?bool
     {
-        return $this->obupada;
+        return $this->ocupada;
     }
 
-    public function setObupada(bool $obupada): static
+    public function setObupada(bool $ocupada): static
     {
-        $this->obupada = $obupada;
+        $this->ocupada = $ocupada;
 
         return $this;
     }

@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vagas index{% endblock %}
+
+{% block body %}
+    <h1>Vagas index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Tipo</th>
+                <th>Ocupada</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for vaga in vagas %}
+            <tr>
+                <td>{{ vaga.id }}</td>
+                <td>{{ vaga.tipo }}</td>
+                <td>{{ vaga.ocupada ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('app_vagas_show', {'id': vaga.id}) }}">show</a>
+                    <a href="{{ path('app_vagas_edit', {'id': vaga.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_vagas_new') }}">Create new</a>
+{% endblock %}

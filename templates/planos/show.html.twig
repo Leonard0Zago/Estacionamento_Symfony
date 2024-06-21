@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Planos{% endblock %}
+
+{% block body %}
+    <h1>Planos</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ plano.id }}</td>
+            </tr>
+            <tr>
+                <th>Nome</th>
+                <td>{{ plano.nome }}</td>
+            </tr>
+            <tr>
+                <th>Descricao</th>
+                <td>{{ plano.descricao }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_planos_index') }}">back to list</a>
+
+    <a href="{{ path('app_planos_edit', {'id': plano.id}) }}">edit</a>
+
+    {{ include('planos/_delete_form.html.twig') }}
+{% endblock %}
