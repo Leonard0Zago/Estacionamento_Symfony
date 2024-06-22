@@ -62,4 +62,21 @@ class Veiculo
 
         return $this;
     }
+    
+    /**
+     * @ORM\OneToOne(targetEntity=Vagas::class, inversedBy="veiculo", cascade={"persist", "remove"})
+     */
+    private $Vagas;
+
+    public function getVagas(): ?Vagas
+    {
+        return $this->vagas;
+    }
+
+    public function setVagas(?Vagas $vagas): self
+    {
+        $this->vagas = $vagas;
+
+        return $this;
+    }
 }
