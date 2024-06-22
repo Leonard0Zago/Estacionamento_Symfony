@@ -17,7 +17,7 @@ Controla o fluxo de veículos.
 
 Gera relatórios sobre a movimentação financeira.
 
-## Membros:
+## Autores
 João Arthur Becker
 
 Leonardo Manoel Machado
@@ -25,8 +25,3 @@ Leonardo Manoel Machado
 Leonardo Perosa Zago
 
 Vitor Dieter Devila
-
-
-
-20/06 Criado entity, migrations, controllers
-21/06 Criado conexão com o banco de dados
